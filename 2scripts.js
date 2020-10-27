@@ -1,46 +1,55 @@
-// console.log('HELOOOOO')
+// window.onload = function() {
+//   console.log ('Helllo World')
+// };
+
 // These variable hold the numbers we want to do operations on and the name of the operation we want to perform.
 // They are expected to change so we use the "let" keyword.
 let firstNum = null
 let secondNum = null
 let operation = null
+
+
 // this function takes in the number you type in the input field and saves it to the "firstNum" variable
 const saveFirstNumber = (num) => {
-  firstNum = parseInt(num)  
+  firstNum = parseInt(num)
 }
+
 // this function takes in the number you type in the 2nd input field and saves it to the "secondNum" variable
 const saveSecondNumber = (num) => {
   // "parseInt" is a built in function in JS that converts a string/word into a number
   secondNum = parseInt(num)
 }
+
 // this function takes in two argument/numbers and returns the sum of them
 const add = (numA, numB) => {
   const sum = numA + numB
-  // console.log('add',sum)
   return sum
 }
+
 // this function takes in two argument/numbers and returns the difference of them
 const subtract = (numA, numB) => {
   const difference = numA - numB
-  // console.log('subtract'difference)
   return difference
 }
+
 // These variables are already defined but that don't point to functions. It's up to you to build the functions to complete your calculator use:
+
 const multiply = (numA, numB) => {
+  return numA*numB
   // * to get a product then return it
-  const product=numA * numB
   // Open up the inspector tool in Chrome and select the Console tab to see what this functions is "logging out" to the console.
-  // console.log(numA, numB)
-  return product
 }
+
 const divide = (numA, numB)=> {
   return numA/numB
 }
 // / to get a quotient,
-const modulus = (numA, numB)=>{
+
+const modulus = (numA, numB) => {
   return numA%numB
 }
 // and % to get a remainder.
+
 // This function changes the "operation" variable to be equal to the "id" of the button we choose on the web page.
 const changeOperation = (chosenOperation) => {
   operation = chosenOperation
@@ -64,7 +73,7 @@ const equals = () => {
     break;
     case "subtraction": putResultInElement(subtract(firstNum, secondNum)) 
     break;
-    case "multiplication": putResultInElement(multiply(firstNum, secondNum))
+    case "multiplication": putResultInElement(multiply(firstNum, secondNum)) 
     break;
     case "division": putResultInElement(divide(firstNum, secondNum)) 
     break;
@@ -73,4 +82,3 @@ const equals = () => {
     default: "Choose an operation"
   }
 }
-
